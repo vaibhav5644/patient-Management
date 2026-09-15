@@ -6,7 +6,7 @@ public class Demo_Feature {
 
 	public static void main(String[] args) {
 
-		HashMap<String, String> map = new HashMap();
+		HashMap<String, String> map = new HashMap<>();
 		map.put("Ram", "12");
 		map.put("shyam", "122");
 		map.put("Monya", "123");
