@@ -11,20 +11,16 @@ import java.util.List;
 @Service
 public class PatientService {
 
-    private PatientRepository patientRepository;
+	private PatientRepository patientRepository;
 
-    public PatientService(PatientRepository patientRepository) {
-        this.patientRepository = patientRepository;
-    }
-
-    public List<PatientResponseDTO> getPatients() {
-
-        List<Patient> patients = patientRepository.findAll();
-        return patients.stream().
-                map(PatientMapper::toDTO).toList();
-    }
-    
-    public static void main(String[] args) {
-		 System.out.println("Push Git");
+	public PatientService(PatientRepository patientRepository) {
+		this.patientRepository = patientRepository;
 	}
+
+	public List<PatientResponseDTO> getPatients() {
+
+		List<Patient> patients = patientRepository.findAll();
+		return patients.stream().map(PatientMapper::toDTO).toList();
+	}
+
 }
