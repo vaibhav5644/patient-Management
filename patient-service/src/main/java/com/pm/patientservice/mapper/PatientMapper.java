@@ -16,8 +16,4 @@ public class PatientMapper {
         return patientDTO;
     }
 
-
-    public static void main(String[] args) {
-        System.out.println("test _featue _2");
-    }
 }
