@@ -5,7 +5,7 @@ import com.pm.patientservice.model.Patient;
 
 public class PatientMapper {
 
-    public static PatientResponseDTO toDTO(Patient patient){
+    public static PatientResponseDTO toDTO(Patient patient) {
         PatientResponseDTO patientDTO = new PatientResponseDTO();
         patientDTO.setId(patient.getId().toString());
         patientDTO.setName(patient.getName());
@@ -14,4 +14,6 @@ public class PatientMapper {
         patientDTO.getDateOfBirth(patient.getDateOfBirth().toString());
         return patientDTO;
     }
+
+
 }
