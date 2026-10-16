@@ -1,0 +1,12 @@
+
+
+PUT http://localhost:4000/patients
+content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "address": "123 Main St, Springfield",
+  "dateOfBirth":"1996-04-01",
+  "registrationDate":"2026-15-10"
+}
