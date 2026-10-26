@@ -41,7 +41,7 @@ public class PatientService {
 
         Patient patient = patientRepository.findById(id).orElseThrow(() -> new PatientNotFoundException("Patient Not found :" + id));
 
-        if (patientRepository.existsByEmail(patientRequestDTO.getEmail())) {
+        if (patientRepository.existsByEmailAndIdNot(patientRequestDTO.getEmail(),id)) {
             throw new EmailAlereadyExistsException("A patient with this email address already exists  " + patientRequestDTO.getEmail());
         }
         patient.setName(patientRequestDTO.getName());
@@ -53,4 +53,7 @@ public class PatientService {
 
     }
 
+    public void deletePatient(UUID id) {
+        patientRepository.deleteById(id);
+    }
 }
